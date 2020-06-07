@@ -420,9 +420,6 @@ img {
     grid-column: 1/3;
     grid-row: 2/4;
 }
-.promo__item--greenlight {
-    grid-row: ;
-}
 .promo ul {
     list-style-type: none;
     margin: 0;
