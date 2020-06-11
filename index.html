@@ -15,8 +15,12 @@
 					<img src="img/menu/logo-technomart.svg" width="108" height="18" alt="Логотип компании 'Техномарт'">
 				</a>
 				<form action="https://echo.htmlacademy.ru" method="GET" class="menu-top__search">
-					<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
-					<input type="search" name="search" placeholder="Поиск:" aria-label="Поиск.">
+					<div class="menu-top__search-wrapper">
+						<label class="visually-hidden" for="search-input">Поле поиска</label>
+						<input class="menu-top__search-input" type="search" name="search" id="search-input"
+						placeholder="Поиск:" required>
+						<svg class="menu-top__search-svg" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path  d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
+					</div>
 				</form>
 				<a href="#" class="menu-top__link menu-top__link--bookmark">Закладки: 0</a>
 				<a href="#" class="menu-top__link menu-top__link--basket">Корзина: 0</a>
@@ -31,7 +35,7 @@
 					<address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
 				</div>
 				<div class="submenu__button">
-					<button type="button" class="btn btn__input"><svg width="20" height="17" viewBox="0 0 20 17" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<button type="button" class="btn btn__come-in"><svg class="btn__svg" width="20" height="17" viewBox="0 0 20 17" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
 						<path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
 						</svg>
@@ -71,28 +75,27 @@
 		<section class="promo">
 			<div class="container">
 				<ul class="promo__list">
-					<li class="promo__item promo__item--yellow card-new--promo">
+					<li class="promo__item promo__item--yellow card-new-promo">
 						<h3>Материалы</h3>
 						<a class="promo__link" href="#">на любой вкус</a>
 					</li>
 					<li class="promo__item promo__item--blue">
 						<h3>Инструмент</h3>
-						<a class="promo__link" href="#">НА ВСЕ СЛУЧАИ</a>
+						<a class="promo__link" href="#">НА ВСЕ СЛУЧАИ </a>
 					</li>
 					<li class="promo__item promo__item--lilac">
 						<h3>Техника</h3>
 						<a class="promo__link" href="#">для стройки</a>
 					</li>
-			
 					<li class="promo-grid">
-						<figure class="slider slider__wrapper-2">
+						<figure class="slider slider__slide-1">
 							<ul class="slider__list">
-								<li class="slider__item ">
+								<li class="slider__item slide-active">
 									<h2 class="slider__title">Перфораторы</h2>
 									<p>Настоящие мужские игрушки</p>
 									<a class="link-main" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
 								</li>
-								<li class="slider__item slide-active">
+								<li class="slider__item ">
 									<h2 class="slider__title">Дрели</h2>
 									<p>Соседям на радость!</p>
 									<a class="link-main" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
@@ -104,7 +107,6 @@
 							</div>
 						</figure>
 					</li>
-				
 					<li class="promo__item promo__item--greenlight">
 						<h3>Скидки 50%</h3>
 						<a class="promo__link" href="#">На 350 ТОВАРОВ</a>
@@ -120,7 +122,7 @@
 		<section class="products">
 			<div class="container">
 				<div class="block-header">
-					<h2>Популярные товары:</h2>
+					<h2 class="block-header__title">Популярные товары: </h2>
 					<a class="link-main" href="#">все поПулярные товары</a>
 				</div>
 				<ul class="catalog-list">
@@ -134,7 +136,7 @@
 						</div>
 						<div class="catalog-list__descr">
 							<h3 class="catalog-list__title">
-							Перфоратор BOSCH BFG 9000</h3>
+							Перфоратор BOSCH BFG 9000 </h3>
 							<span>32500 Р.</span>
 							<a href="catalog.html">25500 Р.</a>
 						</div>
@@ -191,7 +193,7 @@
 		<section class="manufacturer">
 			<div class="container">
 				<div class="block-header">
-					<h2>Популярные ПРОИзводители:</h2>
+					<h2 class="block-header__title">Популярные ПРОИзводители: </h2>
 					<a class="link-main" href="#">все производители</a>
 				</div>
 				<ul class="manufacturer__list">
@@ -241,7 +243,7 @@
 
 		<section class="services">
 			<div class="container">
-				<h2 class="title">Сервисы</h2>
+				<h2 class="title">Сервисы </h2>
 				<div class="services__wrapper">
 					<p class="descr">Хороший интернет-магазин отличается от плохого не только ценами! </p>
 					<p class="descr">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -259,8 +261,8 @@
 						</li>
 					</ul>
 					<div class="services__card">
-						<div class="services__slide services__slide--delivery services-active">
-							<h2 class="title">Доставка</h2>
+						<div class="services__slide services__slide-delivery services-active">
+							<h2 class="title">Доставка </h2>
 							<p class="descr">
 							Мы с удовольствием доставим ваш товар прямо
 							</p> 
@@ -268,13 +270,13 @@
 							<p class="descr">Ведь мы неплохо заработаем, 
 							<p class="descr">поднимая его на ваш этаж!</p>
 						</div>
-						<div class="services__slide services__slide--guarantee ">
+						<div class="services__slide services__slide-guarantee ">
 							<h2 class="title">Гарантия</h2>
 							<p class="descr">Если купленный у нас товар поломается или заискрит, а также в случае пожара, 
 							спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии.
 							Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
 						</div>
-						<div class="services__slide services__slide--credit ">
+						<div class="services__slide services__slide-credit ">
 							<h2 class="title">Кредит</h2>
 							<p class="descr">Залезть в долговую яму стало проще!</p>
 							<p class="descr">Кредитные консультанты придут вам на помощь.</p>
@@ -414,23 +416,39 @@
 	</footer>
 
 	<!-- модальное окно с формой обратной связи -->
-	<div class="modal">
-		<button type="button" class="modal__closed" aria-label="Закрыть окно">&times;</button>
+	<section class="modal modal-contact">
+		<div class="modal-line"></div>
+		<h2 class="visually-hidden">Напишите нам</h2>
+		<button type="button" class="modal__closed" aria-label="Закрыть окно"></button>
 		<form action="https://echo.htmlacademy.ru" method="POST" class="modal__form">
-			<label for="name">Ваше имя:</label>
-			<input type="text" name="name" id="name" placeholder="Имя Фамилия" required aria-label="Имя Фамилия">
-			<label for="email">Ваш e-mail:</label>
-			<input type="email" name="email" id="email" placeholder="email@example.com" required aria-label="email@example.com">
-			<label for="letter">Текст письма:</label>
-			<textarea rows="5" name="letter" id="letter" placeholder="В свободной форме" aria-label="В свободной форме"></textarea>
+			<div class="modal__wrapper">
+				<p>
+					<label for="modal-name">Ваше имя:</label>
+					<input type="text" name="name" id="modal-name" placeholder="Имя Фамилия" required aria-label="Имя Фамилия" class="modal__input">
+				</p>
+				<p>
+					<label for="modal-email">Ваш e-mail:</label>
+					<input type="email" name="email" id="modal-email" placeholder="email@example.com" required aria-label="email@example.com" class="modal__input">
+				</p>
+				<p>
+					<label for="modal-letter">Текст письма:</label>
+					<textarea rows="4" name="letter" id="modal-letter" placeholder="В свободной форме" aria-label="В свободной форме" class="modal__input modal__input-letter"></textarea>
+				</p>
+			</div>
+			<div class="modal__button">
+				<button type="submit" class="modal__btn">Отправить</button>
+			</div>
 		</form>
-		<button type="button" class="modal__btn">ОФОРМИТЬ ЗАКАЗ</button>
-	</div>
+	</section>
 	
 	<!-- модальное окно с картой -->
-	<div class="map">
+	<section class="modal modal-map">
+		<div class="modal-line"></div>
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591874528492!5m2!1sru!2sru" width="943" height="499"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+		</iframe>
 		<button type="button" class="modal__closed" aria-label="Закрыть окно">&times;</button>
 		<!-- <iframe src="#" frameborder="0"></iframe> -->
-	</div>
+	</section>
 </body>
 </html>
