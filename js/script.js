@@ -15,44 +15,46 @@ let email = "";
 try {
     storage = localStorage.getItem("name");
     email = localStorage.getItem("email")
-} catch (err) {
-	isStorageSupport = false;
-}
-
-buttonWrite.addEventListener ('click', function (evt) {
-    evt.preventDefault ();
-    modalContact.classList.add('modal-show');
-    if (storage) {
-            modalName.value = storage;
+}   catch (err) {
+    isStorageSupport = false;
+};
+if(buttonWrite){
+    buttonWrite.addEventListener ('click', function (evt) {
+        evt.preventDefault ();
+        modalContact.classList.add('modal-show');
+        if (storage) {
+                modalName.value = storage;
+                modalEmail.focus();
+        } else {
+                modalName.focus();
+        }
+        if (email) {
+            modalEmail.value = email;
+            modalLetter.focus();
+    }   else {
             modalEmail.focus();
-    } else {
-            modalName.focus();
     }
-    if (email) {
-        modalEmail.value = email;
-        modalLetter.focus();
-}   else {
-        modalEmail.focus();
-}
-});
+    });
+};
 
 closeContact.addEventListener ('click', function (evt) {
     evt.preventDefault ();
     modalContact.classList.remove('modal-show');
     modalContact.classList.remove('modal-error');
 });
-
-modalForm.addEventListener ('submit', function (evt) {
-    if (!modalName.value || !modalEmail.value || !modalLetter.value) {
-            evt.preventDefault ();
-            modalContact.classList.remove('modal-error');
-            modalContact.offsetWidth = modalContact.offsetWidth;
-            modalContact.classList.add('modal-error');       
-    }   else {
-            localStorage.setItem('name', modalName.value);
-            localStorage.setItem('email', modalEmail.value);
-    }
-});
+if(modalForm){
+    modalForm.addEventListener ('submit', function (evt) {
+        if (!modalName.value || !modalEmail.value || !modalLetter.value) {
+                evt.preventDefault ();
+                modalContact.classList.remove('modal-error');
+                modalContact.offsetWidth = modalContact.offsetWidth;
+                modalContact.classList.add('modal-error');
+        }   else {
+                localStorage.setItem('name', modalName.value);
+                localStorage.setItem('email', modalEmail.value);
+            }
+    });
+};
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -70,14 +72,18 @@ let mapLink = document.querySelector('.contacts__map');
 let modalMap = document.querySelector('.modal-map');
 let mapClosed = document.querySelector('.map-closed');
 
-mapLink.addEventListener('click', function (evt) {
-    evt.preventDefault ();
-    modalMap.classList.add('modal-show');
-});
-mapClosed.addEventListener('click', function (evt) {
-    evt.preventDefault ();
-    modalMap.classList.remove('modal-show');
-});
+if(mapLink){
+    mapLink.addEventListener('click', function (evt) {
+        evt.preventDefault ();
+        modalMap.classList.add('modal-show');
+    });
+};
+if(mapClosed){
+    mapClosed.addEventListener('click', function (evt) {
+        evt.preventDefault ();
+        modalMap.classList.remove('modal-show');
+    });
+};
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if ( modalMap.classList.contains("modal-show")) {
@@ -96,6 +102,7 @@ let slideDelivery = document.querySelector(".services__slide-delivery");
 let slideGuarantee = document.querySelector(".services__slide-guarantee");
 let slideCredit = document.querySelector(".services__slide-credit");
 
+if(btnDelivery){
 btnDelivery.addEventListener('click', function (evt) {
     evt.preventDefault ();
     btnDelivery.classList.add('current');
@@ -126,7 +133,7 @@ btnCredit.addEventListener('click', function (evt) {
     slideDelivery.classList.remove('services-active');
 });
 
-
+};
 // слайдер фотографий в промо блоке
 
 let btnRight=document.querySelector(".slider__btn-right");
@@ -135,6 +142,7 @@ let sliderPromo = document.querySelector(".slider");
 let sliderFirst = document.querySelector(".slider__item-one");
 let sliderSecond = document.querySelector(".slider__item-two");
 
+if(btnRight){
 btnRight.addEventListener('click', function (evt) {
     evt.preventDefault ();
     sliderPromo.classList.toggle('slider__slide-1');
@@ -143,21 +151,22 @@ btnRight.addEventListener('click', function (evt) {
     sliderSecond.classList.toggle('slide-active');
 
 });
-
 btnLeft.addEventListener('click', function (evt) {
     evt.preventDefault ();
     sliderPromo.classList.toggle('slider__slide-2');
     sliderSecond.classList.toggle('slide-active');
     sliderPromo.classList.toggle('slider__slide-1');
     sliderFirst.classList.toggle('slide-active');
-    
-});
 
-// модальное окно в каталоге 
+});
+};
+// модальное окно в каталоге
 
 let btnsBuy = document.querySelectorAll('.catalog-list__btn--buy');
 let modalCheckout = document.querySelector('.modal-checkout');
 let checkoutClosed = document.querySelector('.checkout-close');
+let btnOrder = document.querySelector('.modal__btn-red');
+let btnContinue = document.querySelector('.modal__btn-white');
 
 btnsBuy.forEach(function (el) {
     el.addEventListener('click', function (evt) {
@@ -165,11 +174,25 @@ btnsBuy.forEach(function (el) {
     modalCheckout.classList.add('modal-show');
     });
 });
+if(checkoutClosed){
+    checkoutClosed.addEventListener('click', function (evt) {
+        evt.preventDefault ();
+        modalCheckout.classList.remove('modal-show');
+    });
+};
+if(btnOrder){
+    btnOrder.addEventListener('click', function (evt) {
+        evt.preventDefault ();
+        modalCheckout.classList.remove('modal-show');
+    });
+};
+if(btnContinue){
+    btnContinue.addEventListener('click', function (evt) {
+        evt.preventDefault ();
+        modalCheckout.classList.remove('modal-show');
+    });
+};
 
-checkoutClosed.addEventListener('click', function (evt) {
-    evt.preventDefault ();
-    modalCheckout.classList.remove('modal-show');
-});
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {

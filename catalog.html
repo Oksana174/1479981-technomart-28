@@ -2,11 +2,10 @@
 <html class="page" lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Academy: Техномарт</title>
 	<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
 	<header class="header">
@@ -25,7 +24,7 @@
 				</form>
 				<a href="#" class="menu-top__link  menu-top__link--bookmark ">
 					Закладки: 0</a>
-				<a href="#" class="menu-top__link menu-top__link--basket ">
+				<a href="#" class="menu-top__link menu-top__link--basket menu-top__link-work">
 					Корзина: 10</a>
 				<button type="button" class="menu-top__btn">Оформить заказ</button>
 			</div>
@@ -41,10 +40,9 @@
 				</div>	
 				<div class="submenu__button">
 					<div class="submenu__link">
-						<a href="#" aria-label="Войти в профайл пользователя">
+						<a class="submenu__block" href="#" aria-label="Войти в профайл пользователя">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
-						</a>
-						<a href="#"><span class="submenu__name">
+							<span class="submenu__name">
 							Равшан Джамшутович</span>
 						</a>
 						<a href="#" aria-label="Выйти на страницу деавторизации">
@@ -126,8 +124,8 @@
 									width: 80%;
 									margin-left: 0"></div>
 								</div>
-								<div class="filter-range__toggle filter-range__toggle--min" tabindex="0" style="left: 5%"></div>
-								<div class="filter-range__toggle filter-range__toggle--max" tabindex="0" style="left: 70%"></div>
+								<div class="filter-range__toggle filter-range__toggle--min" tabindex="0" style="left: 8%"></div>
+								<div class="filter-range__toggle filter-range__toggle--max" tabindex="0" style="left: 73%"></div>
 							</div>
 							<div class="filter-range__prise-controls">
 								<label class="filter-range__min-price">
@@ -184,13 +182,15 @@
 			</section>
 
 			<section class="catalog">
-				<div class="sorting filters__title ">
-					<h3 class="catalog-title">Сортировка:</h3>
-					<ul>
+				<div class="sorting ">
+					<div class="sorting__title">
+						<h3 class="catalog-title">Сортировка:</h3>
+					</div>
+					<ul class="sorting__list">
 						<li>
-							<button type="button" class=" sorting__btn
-							sorting__btn--price">
-								ПО ЦЕНЕ
+							<button type="button" class="sorting__btn
+							sorting__btn--price sorting__active">
+								ПО ЦЕНЕ 
 							</button>
 						</li>
 						<li>
@@ -204,9 +204,9 @@
 							</button>
 						</li>
 					</ul>
-					<ul>
+					<ul class="sorting__toggle">
 						<li class="sorting__up">
-							<button class="sorting__direction" type="button">
+							<button class="sorting__direction sorting-toggle__active" type="button">
 								<span class="visually-hidden">Вперед</span>
 								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
 							</button>
@@ -225,8 +225,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy " type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -240,8 +240,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 600">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy " type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -255,8 +255,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 600">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -270,8 +270,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -285,8 +285,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 600">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -300,8 +300,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -315,8 +315,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -330,8 +330,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -345,8 +345,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -360,16 +360,16 @@
 				
 				<ul class="transition">
 					<li>
-						<button type="button" class="btn-catalog btn-catalog__min btn-catalog__active" aria-label="Первая страница">1</button>
+						<a href="#" class="btn-catalog btn-catalog__min btn-catalog__active" aria-label="Первая страница">1</a>
 					</li>
 					<li>
-						<button type="button" class="btn-catalog btn-catalog__min" aria-label="Вторая страница">2</button>
+						<a href="#" class="btn-catalog btn-catalog__min" aria-label="Вторая страница">2</a>
 					</li>
 					<li>
-						<button type="button" class="btn-catalog btn-catalog__min" aria-label="Третья страница">3</button>
+						<a href="#" class="btn-catalog btn-catalog__min" aria-label="Третья страница">3</a>
 					</li>
 					<li>
-						<button type="button" class="btn-catalog btn-catalog__max" aria-label="Следующая страница">Следующая</button>
+						<a href="#" class="btn-catalog btn-catalog__max" aria-label="Следующая страница">Следующая</a>
 					</li>
 				</ul>
 			</section>
@@ -485,7 +485,34 @@
 		<button class="modal__closed checkout-close" type="button" aria-label="Закрыть окно"></button>
 	</section>
 
-	<script src='js/catalog.js'></script>
+	<!-- модальное окно с формой обратной связи -->
+
+	<section class="modal modal-contact">
+		<div class="modal-line"></div>
+		<h2 class="visually-hidden">Напишите нам</h2>
+		<button type="button" class="modal__closed" aria-label="Закрыть окно"></button>
+		<form action="https://echo.htmlacademy.ru" method="POST" class="modal__form">
+			<div class="modal__wrapper">
+				<p>
+					<label for="modal-name">Ваше имя:</label>
+					<input type="text" name="name" id="modal-name" placeholder="Имя Фамилия" required aria-label="Имя Фамилия" class="modal__input">
+				</p>
+				<p>
+					<label for="modal-email">Ваш e-mail:</label>
+					<input type="email" name="email" id="modal-email" placeholder="email@example.com"  aria-label="email@example.com" class="modal__input">
+				</p>
+				<p>
+					<label for="modal-letter">Текст письма:</label>
+					<textarea rows="4" name="letter" id="modal-letter" placeholder="В свободной форме"  aria-label="В свободной форме" class="modal__input modal__input-letter"></textarea>
+				</p>
+			</div>
+			<div class="modal__button">
+				<button type="submit" class="modal__btn">Отправить</button>
+			</div>
+		</form>
+	</section>
+
+	<script src="js/script.min.js"></script>
 
 </body>
 </html>

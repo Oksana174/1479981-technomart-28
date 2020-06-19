@@ -50,9 +50,10 @@
 }
 
 body {
+    min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: 'Cuprum', sans-serif;
+    font-family: "Cuprum", "Tahoma", sans-serif;
     font-weight: 400;
 }
 a {
@@ -90,10 +91,10 @@ img {
 
 .header {
     padding-bottom: 60px;
-    background-color: var(--basic-blacklight);
+    background-color: var(--basic-background);
 }
 .menu-top {
-    
+    min-width: 100%;
     background-color: var(--basic-black);
 }
 .menu-top .container {
@@ -149,16 +150,15 @@ img {
     color: var(--white);
 }
 .menu-top__search-input {
-    width: inherit;
-    height: inherit;
+    width: 270px;
+    min-height: 42px;
     padding-left: 42px;
-    background-color: inherit;
     font-size: 18px;
     line-height: 26px;
     color: var(--white); 
     border: none;
 }
-.menu-top__search-svg:hover {
+.menu-top__search-input:hover + .menu-top__search-svg {
     opacity: 1;
 }
 .menu-top__search-input:valid {
@@ -185,7 +185,7 @@ img {
 .menu-top__link {
     position: relative;
     width: 150px;
-    height: 42px;
+    min-height: 42px;
     padding-left: 43px;
     padding-top: 9px;
     color: var(--white);
@@ -231,7 +231,7 @@ img {
     color: var(--white-opacity);
     background-color: var(--black-active);
 } 
-.menu-top__link-work  {
+.menu-top__link-work {
     width: 136px;
     background-color: var(--basic-red);
     margin-left: 14px;
@@ -239,7 +239,7 @@ img {
 }
 .menu-top__btn {
     width: 150px;
-    height: 42px;
+    min-height: 42px;
     padding: 0;
     background-color: var(--basic-green);
     color: var(--white);
@@ -281,7 +281,7 @@ img {
     position: relative;
     display: block;
     width: 270px;
-    height: 45px;
+    min-height: 45px;
     padding-top: 4px;
     padding-left: 71px;
     border: 3px solid var(--white);
@@ -312,13 +312,13 @@ img {
 }
 .submenu__button {
     width: 299px;
+    min-height: 45px;
     margin-top: 46px;
     margin-left: 51px;
     text-align: right;
 }
 /* стилизация кнопок входа и регистрации на главной */
 .btn {
-    height: 45px;
     padding: 0;
     margin-bottom: 5px;
     background-color: var(--white);
@@ -328,11 +328,11 @@ img {
     line-height: 21px;
 }
 .btn__come-in {
-    width: 121px;
-    padding-left: 45px;
-    text-align: left;
-    margin-right: 5px;
     position: relative;
+    width: 121px;
+    margin-right: 5px;
+    padding: 12px 10px 12px 45px;
+    text-align: left;
 }
 .btn__svg {
     position: absolute;
@@ -341,6 +341,7 @@ img {
 }
 .btn__registration {
     width: 150px;
+    padding: 12px 24px;
 }
 .btn:hover {
     color: var(--basic-red);
@@ -370,9 +371,16 @@ img {
     line-height: 21px;
     background-color: var(--white);
 }
+.submenu__block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 229px;
+}
 .submenu__name {
     width: 186px;
     color: var(--text-black);
+    margin-left: 21px;
 }
 .submenu__list {
     min-width: 210px;
@@ -422,12 +430,16 @@ img {
     padding: 0 19px 0 23px;
     list-style-type: none;
 } 
+.navigation__main > li {
+    flex-grow: 1;
+}
 .navigation__link {
     display: block;
     padding: 16px 24px 20px 27px;
     color: var(--white);
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
 }
 .navigation__link-active {
     background-color: var(--black-nav);
@@ -477,7 +489,7 @@ img {
     top: 0;
     left: 230px;
     width: 70px;
-    height: 70px;
+    min-height: 70px;
     background-color: var(--basic-red);
     background: url("../img/products/catalod-new.svg") no-repeat center center;  
 }
@@ -489,7 +501,7 @@ img {
     line-height: 30px;
 }
 .promo__link {
-    display: inline-block;
+    display: block;
     width: 135px;
     margin-top: 14px;
     text-align: center;
@@ -630,8 +642,7 @@ img {
 .link-main {
     display: block;
     width: 192px;
-    padding-top: 11px;
-    padding-bottom: 9px;
+    padding: 11px 10px 9px;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
@@ -676,7 +687,11 @@ img {
 }
 
 /* стилизация блока популярные продукты с карточками */
-
+.products .catalog-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .block-header {
     display: flex;
     align-items: center;
@@ -700,14 +715,9 @@ img {
 .catalog-list {
     padding: 0;
     margin: 20px 0 70px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     text-align: center;
     list-style-type: none;
-}
-.products .catalog-list {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .catalog-list__card {
     position: relative;
@@ -752,7 +762,9 @@ img {
 } 
 .catalog-list__descr {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    margin: 0 auto;
 }
 .catalog-list__title {
     padding: 0 18px;
@@ -770,12 +782,12 @@ img {
     color: var(--text-grey);
 }
 .catalog-list__descr a {
-    display: inline-block;
     width: 141px;
     margin: 14px 34px 21px 45px;
-    padding: 10px 0; 
+    padding: 10px 0 10px 32px; 
     font-size: 17px;
     line-height: 18px;
+    text-align: left;
     text-transform: uppercase;
     color: var(--white);
     background-color: var(--basic-red);
@@ -794,12 +806,12 @@ img {
 }
 .catalog-list__btn {
     width: 135px;
-    height: 38px;
+    min-height: 38px;
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
     border: none;
     border-radius: 2px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: "Cuprum", "Tahoma", sans-serif;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -835,6 +847,7 @@ img {
     border: 3px solid var(--basic-green);
     background-color: var(--white);
     margin-top: 10px;
+    padding: 8px 0;
 }
 .catalog-list__btn--bookmarks:hover {
     border: 3px solid var(--text-blacklight);
@@ -894,7 +907,7 @@ img {
 }
 .descr {
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -942,6 +955,7 @@ img {
 .services__slide {
     position: relative;
     width: 619px;
+    padding-bottom: 10px;
 }
 .services__slide .title {
     width: 305px;
@@ -1006,6 +1020,9 @@ img {
 .services__btn:hover {
     background: var(--basic-black);
 }
+.current:hover {
+    background-color: var(--white);
+}
 .current,
 .current:active,
 .current:focus  {
@@ -1036,7 +1053,7 @@ img {
     width: 478px;
     margin-bottom: 1px;
 }
-.description__descr div {
+.descr__top {
     margin-top: 27px;
 }
 .description__item {
@@ -1073,7 +1090,6 @@ img {
 }
 .contacts .link-main {
     width: 300px;
-    border: none;
 }
 
 /* Стилизация подвала сайта */
@@ -1184,7 +1200,7 @@ img {
     align-items: center;
     width: 44px;
     height: 44px;
-    margin-right: 2px;
+    margin-right: 1px;
     background: linear-gradient(0deg, var(--black-social), var(--black-social));
     border-radius: 50%;
 }
@@ -1281,7 +1297,7 @@ img {
 .catalog-title {
     padding: 0;
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1297,12 +1313,13 @@ img {
     margin-top: 20px;
     margin-bottom: 59px;
 }
+
 /* Стилизация фильтра */
 .filters {
     width: 220px;
 }
 .filters__title {  
-    padding: 9px 18px 10px;
+    padding: 10px 5px 10px 18px;
     background-color: var(--catalog-background);
 } 
 .filter {
@@ -1323,7 +1340,7 @@ img {
 }
 .filter__legend {
     margin-bottom: 15px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-weight: bold;
     font-size: 17px;
     line-height: 27px;
@@ -1336,7 +1353,7 @@ img {
 .filter-range__controls {
     position: relative;
     height: 80px;
-    padding: 39px 20px 0 20px;
+    padding: 38px 20px 0 20px;
     margin-bottom: 9px;
     background-color: var(--catalog-background);
     border-radius: 5px;
@@ -1372,7 +1389,7 @@ img {
 }
 .filter-range__prise-controls label {
     width: 95px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 17px;
     line-height: 18px;
     text-transform: uppercase;
@@ -1381,7 +1398,7 @@ img {
 .filter-range__prise-controls input {
     width: 95px;
     text-align: center;
-    padding: 9px;
+    padding: 7px 9px 11px 21px;
     border: none;
     border-radius: 5px;
     background-color: var(--catalog-background);
@@ -1396,7 +1413,7 @@ img {
 .filter-range__max-price::before {
     content: "";
     position: absolute;
-    top: 19px;
+    top: 18px;
     left: -19px;
     width: 9px;
     border: 1px solid var(--catalog-line);
@@ -1405,7 +1422,7 @@ img {
     padding: 0;
     margin: 0;
     list-style: none;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 15px;
     line-height: 24px;
     text-transform: uppercase;
@@ -1492,48 +1509,56 @@ img {
 .catalog {
     width: 700px;
 }
-.catalog .filters__title {
-    padding-left: 19px;
-    padding-right: 14px;
-}
 .sorting {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: var(--catalog-background);
 }
-.sorting ul {
+.sorting__title {
+    width: 221px;
+    padding: 10px 14px 10px 20px;
+    margin-right: 20px;
+}
+.sorting__list,
+.sorting__toggle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
 }
-.sorting h3 {
-    margin-right: 140px;
+.sorting__list {
+    width: 360px;
+    margin-top: 8px;
+    margin-bottom: 11px;
+}
+.sorting__toggle {
+    width: 43px;
+    margin-top: 8px;
+    margin-left: 40px;
 }
 .sorting__btn {
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
-    line-height: 15px;
+    line-height: 18px;
     text-transform: uppercase;
     padding: 0;
-    border: none;
     background-color: var(--catalog-background);
     color: var(--black-filter);
+    border: none;
     border-bottom: 1px dotted var(--basic-red);
     cursor: pointer;
 }
-.sorting__btn--price {
-    margin-right: 70px;
-}
-.sorting__btn--functional {
-    margin-right: 46px;
-}
-.sorting__btn--type {
-    margin-right: 66px;
+.sorting__active {
+    color: var(--basic-red);
+    border-bottom: none;
+    outline: none;
 }
 .sorting__btn:hover {
     color: var(--text-black);
-    border-bottom-style: solid;
+    border-bottom: 1px solid;
 }
 .sorting__btn:active, 
 .sorting__btn:focus {
@@ -1562,17 +1587,22 @@ img {
 }  
 .sorting__direction:active,
 .sorting__direction:focus {
-    outline: none;
+    outline-color: var(--basic-red);
+}
+.sorting-toggle__active path {
+    fill: var(--basic-red);
 }
 .catalog .catalog-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 27px;
     margin-bottom: 30px;
+    width: calc(100% + 20px);
 }
 .catalog .catalog-list__card {
     margin-bottom: 18px;
+    margin-right: 20px;
 }
 .transition {
     list-style: none;
@@ -1583,34 +1613,37 @@ img {
 }
 .transition .btn-catalog {
     margin-right: 10px;
-    cursor: pointer;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 /* стилизация кнопок в каталоге */
 .btn-catalog {
-    font-family: inherit;
-    font-size: inherit;
     border: 1px solid var(--catalog-greylight);
     background-color: var(--white);
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", "Tahoma", sans-serif;
     font-size: 13px;
     line-height: 18px;
     text-align: center;
     text-transform: uppercase;
+    color: var(--text-black);
 }
 .btn-catalog__filter {
     width: 220px;
-    height: 38px;
+    min-height: 38px;
     margin-top: 35px;
     cursor: pointer;
 }
 .btn-catalog__min {
     width: 38px;
-    height: 38px;
+    min-height: 38px;
     border-radius: 2px;
 }
 .btn-catalog__max {
     width: 140px;
-    height: 38px;
+    min-height: 38px;
     border-radius: 2px;
 }
 .btn-catalog__min:hover,
@@ -1657,15 +1690,17 @@ img {
 }
 .modal-contact, 
 .modal-checkout {
-    top: 20%;
+    top: 15%;
     bottom: auto;
     width: 620px;
     background-color: var(--white);
 }
 .modal-line {
+    position: relative;
     width: 100%;
     height: 7px;
     background-color: var(--basic-red);
+    z-index: 3;
 }
 .modal__closed {
     position: absolute;
@@ -1747,6 +1782,23 @@ img {
 .modal-map {
     width: 943px;
     height: 499px;
+}
+.modal-map iframe {
+    position: relative;
+    z-index: 2;
+}
+.modal-map__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 943px;
+    height: 499px;
+}
+.modal-map .modal__closed {
+    z-index: 3;
 }
 .modal-checkout__title {
     position: relative;

@@ -5,7 +5,7 @@
 	<title>HTML Academy: Техномарт</title>
 	<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
 	<header class="header">
@@ -37,12 +37,14 @@
 					<address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
 				</div>
 				<div class="submenu__button">
-					<button type="button" class="btn btn__come-in"><svg class="btn__svg" width="20" height="17" viewBox="0 0 20 17" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<button type="button" class="btn btn__come-in">
+						<svg class="btn__svg" width="20" height="17" viewBox="0 0 20 17" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
 						<path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
 						</svg>
-						Войти</button>
-					<button type="button" class="btn btn__registration">Регистрация</button>      
+						Войти  
+					</button>
+					<button type="button" class="btn btn__registration">Регистрация</button>     
 				</div>
 			</div>
 			<nav class="navigation">
@@ -132,8 +134,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card03.png" width="184" height="104" alt="Перфоратор BOSCH BFG 9000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="#" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -147,8 +149,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -162,8 +164,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card01.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -177,8 +179,8 @@
 						<div class="catalog-list__wrapper">
 							<img class="catalog-list__img" src="img/products/card02.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
 							<div class="catalog-list__button">
-								<button class="catalog-list__btn catalog-list__btn--buy" type="button">КУПИТЬ</button>
-								<button class="catalog-list__btn catalog-list__btn--bookmarks" type="button">В закладки</button>
+								<a href="writeus.html" class="catalog-list__btn catalog-list__btn--buy">КУПИТЬ</a>
+								<a href="#" class="catalog-list__btn catalog-list__btn--bookmarks">В закладки</a>
 							</div>
 						</div>
 						<div class="catalog-list__descr">
@@ -265,12 +267,8 @@
 					<div class="services__card">
 						<div class="services__slide services__slide-delivery services-active">
 							<h2 class="title">Доставка </h2>
-							<p class="descr">
-							Мы с удовольствием доставим ваш товар прямо
-							</p> 
-							<p class="descr">к вашему подъезду совершенно бесплатно!</p>
-							<p class="descr">Ведь мы неплохо заработаем, 
-							<p class="descr">поднимая его на ваш этаж!</p>
+							<p class="descr">Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно!</p>
+							<p class="descr">Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
 						</div>
 						<div class="services__slide services__slide-guarantee ">
 							<h2 class="title">Гарантия</h2>
@@ -295,10 +293,8 @@
 					<h2 class="title">КОМПАНИЯ «Техномарт»</h2>
 					<div class="description__descr">
 						<p class="descr">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-						<div>
-							<p class="descr">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
-							<p class="descr">Техномарт работает со многими транспортными компаниями:</p>
-						</div>
+						<p class="descr descr__top">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+						<p class="descr">Техномарт работает со многими транспортными компаниями:</p>
 					</div>
 					<ul class="description__list">
 						<li class="description__item">Деловые линии</li>
@@ -312,10 +308,10 @@
 					<h2 class="title">КОНТАКТЫ</h2>
 					<p class="descr">Вы можете забрать товар сами,  
 					заехав в наш офис:</p>
-					<a class="contacts__map" href="#">
+					<a class="contacts__map" href="writeus.html">
 						<img src="img/map.svg" width="300" height="158" alt="Техномарт расположен по адресу ул.Большая Конюшенная, дом 19">
 					</a>
-					<button class="link-main btn-contact"  type="button">Заблудились? НапиШИТЕ НАМ!</button>
+					<a href="writeus.html" class="link-main btn-contact"> Заблудились? НапиШИТЕ НАМ!</a>
 				</section>
 			</div>
 		</div>
@@ -442,9 +438,22 @@
 		<h2 class="visually-hidden">Как до нас добраться</h2>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1591874528492!5m2!1sru!2sru" width="943" height="499"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 		</iframe>
+		<img class="modal-map__img" src="img/mapbig.jpg" width="943" height="499" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
 		<button type="button" class="modal__closed map-closed" aria-label="Закрыть окно"></button>
 	</section>
 
-	<script src="js/script.js"></script>
+	<!-- модальное окно для карточки товара -->
+
+	<section class="modal modal-checkout ">
+		<div class="modal-line"></div>
+		<h2 class="modal-checkout__title">Товар добавлен в корзину!</h2>
+		<div class="modal__button">
+			<button type="button" class="modal__btn-red">Оформить заказ</button>
+			<button type="button" class="modal__btn-white">Продолжить покупки</button>
+		</div>
+		<button class="modal__closed checkout-close" type="button" aria-label="Закрыть окно"></button>
+	</section>
+
+	<script src="js/script.min.js"></script>
 </body>
 </html>
